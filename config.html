@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>BOSWatch3</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/custom/custom.css" rel="stylesheet">
+
+     
+  </head>
+
+  <body>
+
+
+<!--- BEGINNAVIGATION -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand font-weight-light" href="#">BOSWatch3</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="login.php">Login
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+              <li class="nav-item ">
+              <a class="nav-link active" href="index.php">Dashboard
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item dropdown ">
+        <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Auswertung
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item " href="pocsag.php">POCSAG</a>
+        <a class="dropdown-item" href="#">ZVEI</a>
+        <a class="dropdown-item" href="#">FMS</a>
+                 <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Einsätze</a>
+    
+        </div>
+      </li>
+            <li class="nav-item dropdown">
+        <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Konfiguration
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Feuerwehren</a>
+        <a class="dropdown-item" href="#">Bereiche</a>
+        <a class="dropdown-item" href="#">Einheiten</a>
+        <a class="dropdown-item" href="#">Gruppen</a>
+                 <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Standorte</a>
+        <a class="dropdown-item" href="#">Fahrzeuge</a>
+             <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">MItglieder</a>
+        </div>
+      </li>
+            <li class="nav-item dropdown">
+        <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Einstellungen
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Grundeinstellungen</a>
+        <a class="dropdown-item" href="#">Plugins</a>
+        <a class="dropdown-item" href="#">Clients</a>
+
+        </div>
+      </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<!--- ENDENAVIGATION -->
+    <!-- BEGINPAGE -->
+
+    <div class="container">
+
+	
+	
+			<!-- BEGINNE ELEMENT -->
+	
+	
+			<!-- BEGIN Überschrift und Speichern -->
+						
+			<div class=" row py-3">
+				<div class="col-6">
+					<h4>Einstellungen</h4>
+				</div>
+				<div class="col-6">
+				<div class="text-right">
+				<div class="btn-group">
+					<button class="pull-right btn btn-success btn-sm">Speichern</button>
+					<button class="btn btn-secondary btn-sm ">Verwerfen</button>
+				</div>
+				</div>
+				</div>
+			</div>
+			<!-- ENDE Überschrift und Speichern -->
+			
+			
+	
+			
+			
+			
+				<div class=" py-3">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Grundeinstellungen</h5> 
+					<h6 class="Subtitel"> Alle Einstellungen bezüglich der Konfiguration der Initialen BOSWatch Instanz</h6>
+					
+					<div class="row py-3">
+					
+					
+						<div class=" col-lg-4 ">
+							<label for="firstName">Instanzen Name</label>
+							<input type="text" class="form-control" id="firstName" placeholder="BOSWatch-3" value="" required>
+							<div class="invalid-feedback">
+							Valid first name is required.
+							</div>
+						<p class="py-md-1"><small> Der BosWatch Instanzenname identifiert die Instanz. </small><p>
+						</div>
+						
+						<div class=" col-lg-4 ">
+							<label for="firstName">Instanzen Name</label>
+							
+							<a class="" data-toggle="collapse" href="#help-instanzenname" role="button" aria-expanded="false" aria-controls="collapseExample">?</a>
+							
+							<input type="text" class="form-control" id="firstName" placeholder="BOSWatch-3" value="" required>
+							 
+							<div class="collapse" id="help-instanzenname">
+  <div class="card card-body">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  </div>
+</div>
+							<div class="invalid-feedback">
+							Valid first name is required.
+							</div>
+							
+						<p class="py-md-1"><small> Der BosWatch Instanzenname identifiert die Instanz. </small><p>
+						</div>
+						<p>
+ 
+
+						
+						
+						<div class=" col-lg-4 ">
+							<label for="LogLevel">Log Level</label>
+							<select class="form-control" id="exampleFormControlSelect1">
+								<option>Debug</option>
+								<option>Information</option>
+								<option>Warning</option>
+								<option>Error</option>
+								<option>Fatal</option>
+								</select>
+								<p class="py-md-1"><small>Definiert in welcher ausführlichkeit das Log unter \\var\logs\boswatch\ geschrieben wird. </small><p>
+						</div>
+					</div>
+				</div>
+			</div>
+       
+			</div>
+			<div class=" py-3">
+						<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Doppelfilter</h5> 
+					<h6 class="Subtitel"> Alle Einstellungen bezüglich der Konfiguration der Filterungen von doppelten Alarmen</h6>
+					
+					<div class="row py-3">
+					
+					
+						<div class=" col-lg-6 ">
+							<label for="firstName">Doppelfilter aktiv</label>
+							<div>
+								  <label class="switch">
+								<input type="checkbox">
+								<span class="slider round"></span>
+								</label>
+							</div>
+							<div class="invalid-feedback">
+							Valid first name is required.
+							</div>
+						<p class="py-md-1"><small> Der BosWatch Instanzenname identifiert die Instanz. </small><p>
+						</div>
+						
+						
+						
+						<div class=" col-lg-4 ">
+							<label for="LogLevel">Log Level</label>
+							<select class="form-control" id="exampleFormControlSelect1">
+								<option>Debug</option>
+								<option>Information</option>
+								<option>Warning</option>
+								<option>Error</option>
+								<option>Fatal</option>
+								</select>
+								<p class="py-md-1"><small>Definiert in welcher ausführlichkeit das Log unter \\var\logs\boswatch\ geschrieben wird. </small><p>
+						</div>
+					</div>
+				</div>
+	
+       
+			</div>
+			
+			
+		</div>
+
+	</div>
+	
+ <footer class="footer">
+      <div class="container text-center">
+        <span class="text-muted"> BOSWATCH 3 &#149;	Version 0.1  </span>
+      </div>
+    </footer>
+<!-- ENDEPAGE -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
