@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<p><a class="btn btn-default" href="{% url 'bw3backend_plugininstance_config_list' %}">plugininstance_config Listing</a></p>
+<table class="table">
+<tr><td>setting</td><td>{{ object.setting }}</td></tr>
+<tr><td>value</td><td>{{ object.value }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit plugininstance_config</a>
+
+{% endblock %}

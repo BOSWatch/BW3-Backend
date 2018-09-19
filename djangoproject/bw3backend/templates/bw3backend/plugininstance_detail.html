@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<p><a class="btn btn-default" href="{% url 'bw3backend_plugininstance_list' %}">plugininstance Listing</a></p>
+<table class="table">
+<tr><td>name</td><td>{{ object.name }}</td></tr>
+<tr><td>created</td><td>{{ object.created }}</td></tr>
+<tr><td>set_active</td><td>{{ object.set_active }}</td></tr>
+<tr><td>set_callbychild</td><td>{{ object.set_callbychild }}</td></tr>
+<tr><td>set_calldirect</td><td>{{ object.set_calldirect }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit plugininstance</a>
+
+{% endblock %}
