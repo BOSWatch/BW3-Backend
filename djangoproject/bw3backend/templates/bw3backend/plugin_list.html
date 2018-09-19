@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<p><a class="btn btn-default" href="{% url 'bw3backend_plugin_list' %}">plugin Listing</a></p>
+<table class="table">
+<tr>
+<td>ID</td><td>Link</td>
+    <td>name</td>
+    <td>version</td>
+    <td>builddate</td>
+    <td>creator</td>
+</tr>
+{% for object in object_list %}
+<tr>
+    <td>{{object.pk}}</td>
+    <td><a href="{{object.get_absolute_url}}">{{object}}</a></td>
+    <td>{{ object.name }}</td>
+    <td>{{ object.version }}</td>
+    <td>{{ object.builddate }}</td>
+    <td>{{ object.creator }}</td>
+</tr>
+{% endfor %}
+</table><a class="btn btn-primary" href="{% url 'bw3backend_plugin_create' %}">Create new plugin</a>
+{% endblock %}

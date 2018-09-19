@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<p><a class="btn btn-default" href="{% url 'bw3backend_orga_location_list' %}">orga_location Listing</a></p>
+<table class="table">
+<tr>
+<td>ID</td><td>Link</td>
+    <td>name</td>
+    <td>addr_street</td>
+    <td>addr_nr</td>
+    <td>addr_plz</td>
+    <td>addr_city</td>
+    <td>telephone</td>
+</tr>
+{% for object in object_list %}
+<tr>
+    <td>{{object.pk}}</td>
+    <td><a href="{{object.get_absolute_url}}">{{object}}</a></td>
+    <td>{{ object.name }}</td>
+    <td>{{ object.addr_street }}</td>
+    <td>{{ object.addr_nr }}</td>
+    <td>{{ object.addr_plz }}</td>
+    <td>{{ object.addr_city }}</td>
+    <td>{{ object.telephone }}</td>
+</tr>
+{% endfor %}
+</table><a class="btn btn-primary" href="{% url 'bw3backend_orga_location_create' %}">Create new orga_location</a>
+{% endblock %}
