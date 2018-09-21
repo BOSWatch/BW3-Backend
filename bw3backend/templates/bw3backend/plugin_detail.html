@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<p><a class="btn btn-default" href="{% url 'bw3backend_plugin_list' %}">plugin Listing</a></p>
+<table class="table">
+<tr><td>name</td><td>{{ object.name }}</td></tr>
+<tr><td>version</td><td>{{ object.version }}</td></tr>
+<tr><td>builddate</td><td>{{ object.builddate }}</td></tr>
+<tr><td>creator</td><td>{{ object.creator }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit plugin</a>
+
+{% endblock %}

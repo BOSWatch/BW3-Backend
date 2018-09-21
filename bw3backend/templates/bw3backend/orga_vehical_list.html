@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<p><a class="btn btn-default" href="{% url 'bw3backend_orga_vehical_list' %}">orga_vehical Listing</a></p>
+<table class="table">
+<tr>
+<td>ID</td><td>Link</td>
+    <td>name</td>
+    <td>optaname</td>
+    <td>numberplate</td>
+</tr>
+{% for object in object_list %}
+<tr>
+    <td>{{object.pk}}</td>
+    <td><a href="{{object.get_absolute_url}}">{{object}}</a></td>
+    <td>{{ object.name }}</td>
+    <td>{{ object.optaname }}</td>
+    <td>{{ object.numberplate }}</td>
+</tr>
+{% endfor %}
+</table><a class="btn btn-primary" href="{% url 'bw3backend_orga_vehical_create' %}">Create new orga_vehical</a>
+{% endblock %}

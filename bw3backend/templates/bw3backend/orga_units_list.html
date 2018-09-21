@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<p><a class="btn btn-default" href="{% url 'bw3backend_orga_units_list' %}">orga_units Listing</a></p>
+<table class="table">
+<tr>
+<td>ID</td><td>Link</td>
+    <td>name</td>
+    <td>description</td>
+    <td>optaname</td>
+</tr>
+{% for object in object_list %}
+<tr>
+    <td>{{object.pk}}</td>
+    <td><a href="{{object.get_absolute_url}}">{{object}}</a></td>
+    <td>{{ object.name }}</td>
+    <td>{{ object.description }}</td>
+    <td>{{ object.optaname }}</td>
+</tr>
+{% endfor %}
+</table><a class="btn btn-primary" href="{% url 'bw3backend_orga_units_create' %}">Create new orga_units</a>
+{% endblock %}
