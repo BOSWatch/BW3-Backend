@@ -3,17 +3,16 @@
 ```pip3 install django django-extensions django-crispy-forms djangorestframework django-bootstrap3```
 
 
+## Starten des Django Servers
 
-## Script zum Nutzen der Klassen: 
 
+``` 
+cd web
+python3 manage.py runserver
 ```
-import os
-import django
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'bw3webinterface.settings')
-django.setup()
-from bw3backend import models as webmodule
-webmodule.client.objects.all()
-```
+
+Zum Nutzen der Abfrageklassen einfach die bw3api importieren und mittels den angegebenen Klassen die Daten holen.
+
 
 
 ## Zugangsdaten für die Develop-Datenbank:
