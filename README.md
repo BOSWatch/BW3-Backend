@@ -18,5 +18,5 @@ webmodule.client.objects.all()
 
 ## Zugangsdaten für die Develop-Datenbank:
 
-Nutzername: boswatch_test <br>
-Passwort:   bw3test123
+Nutzername: test	<br>
+Passwort:   test

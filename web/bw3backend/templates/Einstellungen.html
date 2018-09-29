@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class=" row py-3">
+				<div class="col-6">
+					<h4>Einstellungen</h4>
+				</div>
+				<div class="col-6">
+				<div class="text-right">
+				<div class="btn-group">
+					<button class="pull-right btn btn-success btn-sm">Speichern</button>
+					<button class="btn btn-secondary btn-sm ">Verwerfen</button>
+				</div>
+				</div>
+				</div>
+			</div>
+
+				<div class=" py-3">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Grundeinstellungen</h5>
+					<h6 class="Subtitel"> Alle Einstellungen bezüglich der Konfiguration der Initialen BOSWatch Instanz</h6>
+
+					<div class="row py-3">
+
+
+{% if all_global_config_list %}
+
+    {% for setting in all_global_config_list %}
+
+	<div class=" col-lg-4 ">
+        <label for="firstName">{{ setting.front_name }}</label>
+		<input type="text" class="form-control" id="firstName"  value="{{ setting.value }}" required>
+		    <div class="invalid-feedback">
+				Valid first name is required.
+			</div>
+        <p class="py-md-1"><small> {{ setting.front_description }} </small><p>
+    </div>
+
+
+    {% endfor %}
+
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+
+                    </div></div></div></div>
+{% endblock %}
